@@ -20,13 +20,14 @@ btn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
   overlay.classList.add('hidden');
 });
-
+/*
 function shareOnFacebook() {
   const url = window.location.href;
   const imageUrl = cardImg1.src; // ou cardImg2.src se preferires
   const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&picture=${encodeURIComponent(imageUrl)}`;
   window.open(facebookUrl, '_blank');
 }
+*/
 
 function shareOnFacebook() {
   const imagemURL = document.getElementById("cardImg1").src;
