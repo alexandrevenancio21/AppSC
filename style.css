@@ -168,3 +168,18 @@ footer a {
   height: auto;
   display: block;
 }
+
+.share-btn {
+  margin-top: 1em;
+  padding: 0.8em 1.2em;
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.share-btn:hover {
+  background-color: #145dbf;
+}

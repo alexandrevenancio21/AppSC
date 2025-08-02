@@ -27,3 +27,20 @@ function shareOnFacebook() {
   const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&picture=${encodeURIComponent(imageUrl)}`;
   window.open(facebookUrl, '_blank');
 }
+
+function shareOnFacebook() {
+  const imagemURL = document.getElementById("cardImg1").src;
+
+  const texto = encodeURIComponent("Descobre este gesto de bondade! 💙 #SomosFeitosDoMesmoCoração");
+
+  const fbAppUrl = `fb://facewebmodal/f?href=https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(imagemURL)}&quote=${texto}`;
+  const fbWebUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(imagemURL)}&quote=${texto}`;
+
+  // Tenta abrir a app
+  window.location.href = fbAppUrl;
+
+  // Fallback: se não abrir, usa o browser
+  setTimeout(() => {
+    window.open(fbWebUrl, "_blank");
+  }, 1000);
+}
