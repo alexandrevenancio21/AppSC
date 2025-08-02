@@ -30,7 +30,7 @@ function shareOnFacebook() {
 */
 
 function shareOnFacebook() {
-  const imagemURL = document.getElementById("cardImg1").src;
+  const imagemURL = document.getElementById("cardImg2").src;
 
   const texto = encodeURIComponent("Descobre este gesto de bondade! 💙 #SomosFeitosDoMesmoCoração");
 
