@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Somos Feitos do Mesmo Coração</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  
+
   <header>
-    <img src="images/logo.png" alt="Logo Santa Casa da Misericórdia de Amarante" class="logo"/>
+    <img src="images/logo.png" alt="Logo Santa Casa da Misericórdia de Amarante" class="logo" />
   </header>
-  
+
   <main>
     <h1>Somos Feitos do Mesmo Coração</h1>
     <h2>Uma campanha que quer tocar o coração da comunidade.</h2>
 
     <p id="texto-explicativo">
       Entre os dias 22 e 29 de agosto, a Santa Casa da Misericórdia de Amarante celebra os
-seus 496 anos a fazer o bem com uma campanha que quer tocar o coração da
-comunidade.
-Espalhadas pela cidade, frases simples e poéticas convidam à reflexão, à empatia e à
-bondade. Em jardins, largos e ruas, surgem pequenos lembretes de que todos
-partilhamos a mesma humanidade.
-Mais do que uma ação simbólica, esta campanha é um gesto coletivo de cuidado. Um
-apelo à paz, ao respeito e à ternura que queremos ver crescer à nossa volta.
-Porque no essencial… somos todos feitos do mesmo coração.
-Partilhe a sua foto
+      seus 496 anos a fazer o bem com uma campanha que quer tocar o coração da
+      comunidade.
+      Espalhadas pela cidade, frases simples e poéticas convidam à reflexão, à empatia e à
+      bondade. Em jardins, largos e ruas, surgem pequenos lembretes de que todos
+      partilhamos a mesma humanidade.
+      Mais do que uma ação simbólica, esta campanha é um gesto coletivo de cuidado. Um
+      apelo à paz, ao respeito e à ternura que queremos ver crescer à nossa volta.
+      Porque no essencial… somos todos feitos do mesmo coração.
+      Partilhe a sua foto
     </p>
-
-    <button id="showCardBtn">Quero descobrir o meu gesto de bondade</button>
+    <div class="formatBtn">
+      <button id="showCardBtn">Quero descobrir o meu gesto de bondade</button>
+      <button id="openMap">Descobre no Mapa</button>
+    </div>
 
     <div id="overlay" class="hidden">
-  <div id="cardModal">
-    <span id="closeBtn">&times;</span>
-    
-    <img id="cardImg1" src="" alt="Cartão parte 1" />
-    <img id="cardImg2" src="" alt="Cartão parte 2" />
-    
-    <div id="shareButtons">
-      <button class="share-btn" onclick="shareOnFacebook()">Partilhar no Facebook</button>
+      <div id="cardModal">
+        <span id="closeBtn">&times;</span>
+
+        <img id="cardImg1" src="" alt="Cartão parte 1" />
+        <img id="cardImg2" src="" alt="Cartão parte 2" />
+
+        <div id="shareButtons">
+          <button class="share-btn" onclick="shareOnFacebook()">Partilhar no Facebook</button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
     <img src="images/homepage_image.png" alt="Imagem decorativa" class="img-abaixo-botao">
   </main>
 
@@ -50,10 +54,12 @@ Partilhe a sua foto
     <a href="https://www.facebook.com/profile.php?id=61563599100017" target="_blank">
       Facebook da Santa Casa da Misericórdia de Amarante
     </a>
+
     <p>#SomosFeitosDoMesmoCoração</p>
     <p>© 2025 Santa Casa da Misericórdia de Amarante. Todos os direitos reservados.</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>
