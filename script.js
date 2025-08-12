@@ -85,12 +85,11 @@ function initMap() {
 function openPoster(imgName, popupText) {
   currentLocation = popupText;
   const poster = document.getElementById("poster");
-  const cardImg1 = document.getElementById("cardImg1");
 
-  // Define a imagem específica
-  if (cardImg1 && imgName) {
-    cardImg1.src = `images/cards/${imgName}`;
-  }
+  const cardNumber = Math.floor(Math.random() * 20) + 1;
+  const cardCode = cardNumber.toString().padStart(2, '0');
+  const filename1 = `c${cardCode}i1.jpg`;
+  cardImg1.src = `images/cards/${filename1}`;
 
   if (poster) {
     poster.style.display = "block";
@@ -116,13 +115,14 @@ function sendMessage() {
   const formURL = "https://docs.google.com/forms/d/e/1FAIpQLScNaYfTIDuHzLwhziM2acDswZhPvoZ4GsI7MC1EkVqoGTdqvg/formResponse";
   const formData = new FormData();
 
+  // Estes entry.xxxxxx são os IDs dos campos do seu form
   formData.append("entry.95954294", currentLocation);
   formData.append("entry.19310802", message);
 
   fetch(formURL, {
     method: "POST",
     body: formData,
-    mode: "no-cors"
+    mode: "no-cors" // evita bloqueio CORS
   }).then(() => {
     alert("Mensagem enviada com sucesso!");
     textarea.value = '';
@@ -130,6 +130,8 @@ function sendMessage() {
   });
 }
 
+
+// Se existir o container do mapa, inicializa o mapa automaticamente
 document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('map')) {
     initMap();
